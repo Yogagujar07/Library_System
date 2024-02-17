@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.nested-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.nested-table th, .nested-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#books">Books</a>
+        <a href="#register">Register</a>
+    </nav>
+
+    <h2 id="books">Books</h2>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td> 
+                    <table class="nested-table">
+                        <th><a href="#book title">Book title 1</a></th>
+                        <tr>
+                            <th>Publication Date:</th>
+                            <th>Page Count</th>
+                            <th>ISBN</th>
+
+                            <tr>
+                                <td>28 Februry 1990</td>
+                                <td>250</td>
+                                <td>978-0486284736</td>
+                            </tr>
+                        </tr>
+                       
+                    </table>
+                </td>
+                <td>Jane Austen</td>
+                <td>Romance</td>
+                <td>Available</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td> 
+                    <table class="nested-table">
+                        <th><a href="#book title">Book title 2</a></th>
+                        <tr>
+                            <th>Publication Date:</th>
+                            <th>Page Count</th>
+                            <th>ISBN</th>
+                        </tr>
+                        <tr>
+                            <td>18 Augast 2002</td>
+                            <td>300</td>
+                            <td>978-0486284736</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>Jane Austen</td>
+                <td>wild</td>
+                <td>Available</td>
+            </tr>
+        </tbody>    
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td> 
+                    <table class="nested-table">
+                        <th><a href="#book title">Book title 3</a></th>
+                        <tr>
+                            <th>Publication Date:</th>
+                            <th>Page Count</th>
+                            <th>ISBN</th>
+                        </tr>
+                        <tr>
+                            <td>28 January 1813</td>
+                            <td>279</td>
+                            <td>978-0486284736</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>John forsters</td>
+                <td>History</td>
+                <td>Available</td>
+            </tr>
+        </tbody>
+    </table>
+   
+
+    <h2 id="register">Register</h2>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="5" max="100" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
